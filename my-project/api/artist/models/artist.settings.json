@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artists",
+  "info": {
+    "name": "artist",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Fname": {
+      "type": "string"
+    },
+    "Lname": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "band_id": {
+      "type": "uid"
+    },
+    "bands": {
+      "via": "artists",
+      "collection": "band"
+    },
+    "songs": {
+      "collection": "song",
+      "via": "artists",
+      "dominant": true
+    }
+  }
+}

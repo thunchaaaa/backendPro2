@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bands",
+  "info": {
+    "name": "band",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "band_name": {
+      "type": "string"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "Genres": {
+      "type": "string"
+    },
+    "albums": {
+      "via": "bands",
+      "collection": "album",
+      "dominant": true
+    },
+    "artists": {
+      "via": "bands",
+      "collection": "artist",
+      "dominant": true
+    },
+    "years_active": {
+      "type": "integer"
+    }
+  }
+}
